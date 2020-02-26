@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {path: 'dashboard', loadChildren: () => import ('./scorecard-dashboard/scorecard-dashboard.module').then(m => m.ScorecardDashboardModule)},
+  {path: 'dashboard', loadChildren: () => import ('./scorecaed-dashboard/scorecaed-dashboard.module').then(m => m.ScorecardDashboardModule)},
   {path: '**', redirectTo: 'dashboard'}
 ];
 

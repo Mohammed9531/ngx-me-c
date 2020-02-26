@@ -5,9 +5,9 @@
 
 .table  {
     th, td {
+        padding: 0;
         border: none !important;
     }
-    
 }
 
 .group-name {
@@ -28,12 +28,11 @@
 }
 
 .row-card {
-    display: block;
     height: 5em;
     text-align: center;
     background-color: #282c34;
     border-radius: 0px;
-    margin: 1px;
+    margin: 2px;
 }
 
 .metric-grade {

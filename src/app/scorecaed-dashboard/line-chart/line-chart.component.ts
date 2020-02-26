@@ -14,12 +14,17 @@ export class LineChartComponent implements OnInit {
 
   @Input() set chartDataInfo(chartDataInfo: LineChart[]) {
     this.chartData = chartDataInfo;
-    if (this.chartData  && this.chartOptions) {
+
+    if (!this.chartOptions) {
+      this.loadChart();
+    }
+
+    if (this.chartData) {
       if (this.chartOptions.series && this.chartOptions.series.length) {
         for (let i = 0 ; i < this.chartOptions.series.length; i++) {
-          if (this.chartData.length > i && this.chartData[i] && this.chartData[i].data) {
+          if (this.chartData.length > i && this.chartData[i] && this.chartData[i]) {
             const series1 = this.chartOptions.series[i] as any;
-            series1.data = Object.assign([], this.chartData[i].data);
+            series1.data = Object.assign([], this.chartData[i]);
           }
         }
         if (this.chart) {
@@ -32,14 +37,19 @@ export class LineChartComponent implements OnInit {
   constructor(@Inject(HIGHCHART_TOKENS) public Highcharts: any) { }
 
   ngOnInit() {
+    // console.log('Line chart loaded...');
   }
   ngOnChanges() {
     this.loadChart();
   }
 
+  setChartInstance(e: any): void {
+    // console.log(e);
+  }
+
   loadChart() {
     this.chartOptions = {
-      // colors: this.chartColors,
+      colors: ['red'],
       chart: {
         animation: false,
         backgroundColor: null,

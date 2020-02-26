@@ -12,12 +12,19 @@ import { HIGHCHART_PROVIDER } from '../core/token-injector';
 
 
 @NgModule({
-  declarations: [DashboardComponentComponent, LineChartComponent, AppGridComponent],
+  declarations: [
+    DashboardComponentComponent,
+    LineChartComponent,
+    AppGridComponent
+  ],
   imports: [
     CommonModule,
     CarouselModule,
     HighchartsChartModule,
     ScorecardDashboardRoutingModule
+  ],
+  exports: [
+    LineChartComponent
   ],
   providers: [HIGHCHART_PROVIDER]
 })

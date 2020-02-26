@@ -1,6 +1,7 @@
 
 export class LineChart {
-    data: any[];
+    metricdate: string;
+    metricvalue: number;
 }
 
 export class MetricsData {
