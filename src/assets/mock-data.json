@@ -12,31 +12,31 @@
             "metricvalue": 9.8
         }, {
             "metricdate": "2020-02-17",
-            "metricvalue": 9.8
+            "metricvalue": 9.7
         }, {
             "metricdate": "2020-02-18",
-            "metricvalue": 9.8
+            "metricvalue": 9.6
         }, {
             "metricdate": "2020-02-19",
-            "metricvalue": 9.8
+            "metricvalue": 9.5
         }, {
             "metricdate": "2020-02-20",
-            "metricvalue": 9.8
+            "metricvalue": 9.4
         }, {
             "metricdate": "2020-02-21",
-            "metricvalue": 9.8
+            "metricvalue": 9.9
         }, {
             "metricdate": "2020-02-22",
-            "metricvalue": 9.8
+            "metricvalue": 10
         }, {
             "metricdate": "2020-02-23",
-            "metricvalue": 9.8
+            "metricvalue": 9.2
         }, {
             "metricdate": "2020-02-24",
-            "metricvalue": 9.8
+            "metricvalue": 9.1
         }, {
             "metricdate": "2020-02-25",
-            "metricvalue": 9.8
+            "metricvalue": 9
         }]
     }, {
         "metric": "% of all P1-P3 Incidents Resolved in less than 2 Hours over Last 90 Days",

@@ -21,9 +21,11 @@
             </td>
             <td *ngFor="let data of item.metrics">
               <div class="row-card">
-                <app-line-chart
-                  [chartDataInfo]="data.metrichistory"
-                ></app-line-chart>
+                <div class="chart-block">
+                  <app-line-chart
+                    [chartDataInfo]="data.metrichistory"
+                  ></app-line-chart>
+                </div>
               </div>
             </td>
           </tr>

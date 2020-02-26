@@ -1,4 +1,4 @@
-import { Component, Inject, Input, OnInit, OnChanges } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { HIGHCHART_TOKENS } from '../../core/token-injector';
 import { LineChart } from '../../core/main/main.model';
 
@@ -9,28 +9,16 @@ import { LineChart } from '../../core/main/main.model';
 })
 export class LineChartComponent implements OnInit {
   chartOptions: any;
-  chartData: LineChart[];
+  chartData: any[];
   chart: Highcharts.Chart;
 
   @Input() set chartDataInfo(chartDataInfo: LineChart[]) {
-    this.chartData = chartDataInfo;
+    if (Array.isArray(chartDataInfo)) {
+      this.chartData = chartDataInfo.map(i => i.metricvalue);
+    }
 
     if (!this.chartOptions) {
       this.loadChart();
-    }
-
-    if (this.chartData) {
-      if (this.chartOptions.series && this.chartOptions.series.length) {
-        for (let i = 0 ; i < this.chartOptions.series.length; i++) {
-          if (this.chartData.length > i && this.chartData[i] && this.chartData[i]) {
-            const series1 = this.chartOptions.series[i] as any;
-            series1.data = Object.assign([], this.chartData[i]);
-          }
-        }
-        if (this.chart) {
-          this.chart.update(this.chartOptions, true);
-        }
-      }
     }
   }
 
@@ -38,13 +26,6 @@ export class LineChartComponent implements OnInit {
 
   ngOnInit() {
     // console.log('Line chart loaded...');
-  }
-  ngOnChanges() {
-    this.loadChart();
-  }
-
-  setChartInstance(e: any): void {
-    // console.log(e);
   }
 
   loadChart() {
@@ -97,7 +78,12 @@ export class LineChartComponent implements OnInit {
           }
         }
       },
-      series: this.chartData,
+      series: [
+        {
+          type: "line",
+          data: this.chartData
+        }
+      ],
     };
   }
 
