@@ -1,0 +1,50 @@
+:host {
+
+    .header {
+      display: flex;
+      height: 70px;
+    }
+  
+    .incidents-header{
+      font-size: 0.8em;
+      font-weight: bold;
+      color: #ffffff;
+      margin: 20px 16px 20px 18px;
+      padding: 6px 20px 0 7px;
+      flex-basis: 50%;
+      position: absolute;
+      left: 15px;
+    }
+  
+    .skew {
+      position: relative;
+      width: 1%;
+      background-color: #ff7b54;
+      -webkit-transform: skew(-15deg);
+      transform: skew(-36deg);
+      left: 30px;
+      height: 45px;
+      min-width: 26px;
+      margin: 17px 20px 10px 0;
+    }
+
+    .bny-title {
+        font-size: 1em;
+        color: #4b4b4b;
+    }
+  
+    .ctoc-image {
+      flex-grow: 1;
+      height: 100%;
+      padding-top: 20px;
+      margin-right: 10px;
+    }
+  
+    .image {
+      width: 6%;
+      min-width: 100px;
+      float: right;
+    }
+  
+  }
+  

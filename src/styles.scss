@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body{
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: Roboto,sans-serif;
+    font-size: 14px;
+    background-color: #000 !important;
+    margin: 0;
+  }
+
+  .GREEN {
+    color: #000;
+    background-color: green;
+  }
+  
+  .custom-carousel{
+    .ui-carousel-prev{
+      display: none;
+    }
+    .ui-carousel-next{
+      display: none;
+    }
+  }
+  
+  .custom-carousel .ui-carousel-dot-icon {
+    width: 576px !important;
+    height: 1080px !important;
+    border-radius: 50%;
+  }
+  .custom-carousel .ui-carousel-dot-item.ui-state-highlight{
+    .ui-carousel-dot-icon {
+      background-color: #007ad9 !important;
+    }
+  
+  }
