@@ -1,7 +1,7 @@
 import {InjectionToken} from "@angular/core";
 import * as Highcharts from 'highcharts';
 
-declare var require: any
+declare const require: any;
 
 require('highcharts/modules/sankey')(Highcharts);
 

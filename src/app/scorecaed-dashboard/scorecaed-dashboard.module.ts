@@ -23,9 +23,6 @@ import { HIGHCHART_PROVIDER } from '../core/token-injector';
     HighchartsChartModule,
     ScorecardDashboardRoutingModule
   ],
-  exports: [
-    LineChartComponent
-  ],
   providers: [HIGHCHART_PROVIDER]
 })
 export class ScorecardDashboardModule { }
