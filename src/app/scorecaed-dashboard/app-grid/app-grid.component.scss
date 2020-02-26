@@ -1,0 +1,44 @@
+.header {
+    color: #c1bcbc;
+    text-align: center;
+}
+
+.table  {
+    th, td {
+        border: none !important;
+    }
+    
+}
+
+.group-name {
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.group-grade {
+    display: block;
+    color: #000;
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+    background-color: rgb(88, 191, 143);
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.row-card {
+    display: block;
+    height: 5em;
+    text-align: center;
+    background-color: #282c34;
+    border-radius: 0px;
+    margin: 1px;
+}
+
+.metric-grade {
+   color: rgb(88, 191, 143);
+   font-weight: bold;
+   text-align: center;
+}
+
